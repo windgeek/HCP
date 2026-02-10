@@ -1,0 +1,108 @@
+package manifest
+
+import (
+	"crypto/rand"
+	"crypto/sha256"
+	"encoding/hex"
+	"encoding/json"
+	"fmt"
+	"io"
+	"os"
+	"time"
+
+	"github.com/btcsuite/btcd/btcec/v2"
+	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
+)
+
+// Manifest represents the HCP Proof of Humanity.
+type Manifest struct {
+	Version     string `json:"version"`
+	Author      string `json:"author"`       // Author's Address
+	ContentHash string `json:"content_hash"` // SHA256 of the content
+	Timestamp   int64  `json:"timestamp"`
+	EntropyDNA  string `json:"entropy_dna"` // Random entropy for now
+	Signature   string `json:"signature"`   // Hex encoded signature
+}
+
+// NewManifest creates a new Manifest for a given file.
+func NewManifest(filePath string, authorAddr string) (*Manifest, error) {
+	// 1. Calculate Content Hash
+	hash, err := calculateFileHash(filePath)
+	if err != nil {
+		return nil, fmt.Errorf("failed to calculate hash: %w", err)
+	}
+
+	// 2. Generate Random EntropyDNA
+	entropy := make([]byte, 32)
+	if _, err := io.ReadFull(rand.Reader, entropy); err != nil {
+		return nil, fmt.Errorf("failed to generate entropy: %w", err)
+	}
+
+	return &Manifest{
+		Version:     "v1",
+		Author:      authorAddr,
+		ContentHash: hash,
+		Timestamp:   time.Now().Unix(),
+		EntropyDNA:  hex.EncodeToString(entropy),
+	}, nil
+}
+
+// Sign signs the manifest using the provided private key.
+// It signs the hash of the JSON representation (excluding the signature itself).
+func (m *Manifest) Sign(key *btcec.PrivateKey) error {
+	// 1. Serialize for signing (canonical JSON)
+	// We need a stable representation. For simplicity, we create a struct without signature.
+	type payload struct {
+		Version     string `json:"version"`
+		Author      string `json:"author"`
+		ContentHash string `json:"content_hash"`
+		Timestamp   int64  `json:"timestamp"`
+		EntropyDNA  string `json:"entropy_dna"`
+	}
+	p := payload{
+		Version:     m.Version,
+		Author:      m.Author,
+		ContentHash: m.ContentHash,
+		Timestamp:   m.Timestamp,
+		EntropyDNA:  m.EntropyDNA,
+	}
+
+	data, err := json.Marshal(p)
+	if err != nil {
+		return fmt.Errorf("failed to marshal payload: %w", err)
+	}
+
+	// 2. Hash the data
+	hash := sha256.Sum256(data)
+
+	// 3. Sign
+	signature := ecdsa.Sign(key, hash[:])
+
+	// 4. Store signature
+	m.Signature = hex.EncodeToString(signature.Serialize())
+	return nil
+}
+
+// Save saves the signed manifest to a file.
+func (m *Manifest) Save(path string) error {
+	data, err := json.MarshalIndent(m, "", "  ")
+	if err != nil {
+		return fmt.Errorf("failed to marshal manifest: %w", err)
+	}
+	return os.WriteFile(path, data, 0644)
+}
+
+func calculateFileHash(path string) (string, error) {
+	f, err := os.Open(path)
+	if err != nil {
+		return "", err
+	}
+	defer f.Close()
+
+	h := sha256.New()
+	if _, err := io.Copy(h, f); err != nil {
+		return "", err
+	}
+
+	return hex.EncodeToString(h.Sum(nil)), nil
+}
