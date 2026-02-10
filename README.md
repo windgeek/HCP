@@ -54,6 +54,16 @@ The protocol is built on four pillars, designed to be modular and resilient.
 - **防御**: 在代码中嵌入不可见的“逻辑干扰”（同形字、零宽逻辑门）。
 - **Effect**: HCP-verified tools strip the noise; unauthorized AI scrapers ingest garbage, degrading their models.
 - **效果**: HCP 验证工具会自动过滤噪音；未经授权的 AI 爬虫则会吸入垃圾数据，从而降低模型性能。
+- **Fuzzy Verification**: HCP tools can detect logical interference and verify human intent even if the content has been reformatted or slightly altered.
+- **模糊验证**: HCP 工具可以检测逻辑干扰，即使内容已被重新格式化或略微修改，也能验证人类意图。
+- `[SUCCESS] Human Intent Verified. Integrity 100%.` (Pure Human Soul)
+- `[SUCCESS] Logic Preserved - Human Intent Verified.` (Reformatted but Logically Identical)
+- `[WARNING] Fingerprint Mismatch!` (Tampered or Logic Changed)
+- **Fuzzy Verification**: HCP tools can detect logical interference and verify human intent even if the content has been reformatted or slightly altered.
+- **模糊验证**: HCP 工具可以检测逻辑干扰，即使内容已被重新格式化或略微修改，也能验证人类意图。
+- `[SUCCESS] Human Intent Verified. Integrity 100%.` (Pure Human Soul)
+- `[SUCCESS] Logic Preserved - Human Intent Verified.` (Reformatted but Logically Identical)
+- `[WARNING] Fingerprint Mismatch!` (Tampered or Logic Changed)
 
 ---
 
@@ -70,7 +80,15 @@ go build -o hcp ./cmd/hcp
 go build -o hcp-release ./cmd/hcp-release
 ```
 
-### 2. Create Your Identity / 创建你的身份
+### 2. Initialize Configuration / 初始化配置 (Optional)
+Generates `~/.hcp/config.yaml` to manage your identity path.
+生成 `~/.hcp/config.yaml` 以管理您的身份路径。
+
+```bash
+./hcp init --global
+```
+
+### 3. Create Your Identity / 创建你的身份
 Generate your permanent "Digital Soul". This identity is yours forever, anchored by math.
 生成你永久的“数字灵魂”。这个身份属于你，由数学锚定。
 

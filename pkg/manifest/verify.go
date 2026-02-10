@@ -16,22 +16,24 @@ import (
 func (m *Manifest) Verify(pubKey *btcec.PublicKey) error {
 	// 1. Reconstruct payload (must match Sign method's payload)
 	type payload struct {
-		Version     string `json:"version"`
-		Author      string `json:"author"`
-		PublicKey   string `json:"public_key"`
-		ContentHash string `json:"content_hash"`
-		Timestamp   int64    `json:"timestamp"`
+		Version         string                    `json:"version"`
+		Author          string                    `json:"author"`
+		PublicKey       string                    `json:"public_key"`
+		ContentHash     string                    `json:"content_hash"`
+		ParentHash      string                    `json:"parent_hash,omitempty"`
+		Timestamp       int64                     `json:"timestamp"`
 		EntropyDNA      string                    `json:"entropy_dna"`
-		Assets          []string                  `json:"assets,omitempty"`
+		Assets          []Asset                   `json:"assets,omitempty"`
 		ContributionMap map[string]aha.AHAMetrics `json:"contribution_map,omitempty"`
 		CognitiveProofs map[string]zkp.Proof      `json:"cognitive_proofs,omitempty"`
 	}
 	p := payload{
-		Version:     m.Version,
-		Author:      m.Author,
-		PublicKey:   m.PublicKey,
-		ContentHash: m.ContentHash,
-		Timestamp:   m.Timestamp,
+		Version:         m.Version,
+		Author:          m.Author,
+		PublicKey:       m.PublicKey,
+		ContentHash:     m.ContentHash,
+		ParentHash:      m.ParentHash,
+		Timestamp:       m.Timestamp,
 		EntropyDNA:      m.EntropyDNA,
 		Assets:          m.Assets,
 		ContributionMap: m.ContributionMap,

@@ -11,6 +11,7 @@ import (
 
 	"github.com/windgeek/HCP/pkg/aha"
 	"github.com/windgeek/HCP/pkg/cognitive"
+	"github.com/windgeek/HCP/pkg/hash"
 	"github.com/windgeek/HCP/pkg/zkp"
 )
 
@@ -18,7 +19,7 @@ import (
 // and generates AHA/Cognitive metrics.
 func CalculateDirHash(root string, ignorePatterns []string) (
 	string, 
-	[]string, 
+	[]Asset, // Changed return type
 	map[string]aha.AHAMetrics, 
 	map[string]zkp.Proof, 
 	error,
@@ -62,7 +63,7 @@ func CalculateDirHash(root string, ignorePatterns []string) (
 	sort.Strings(files)
 
 	globalHasher := sha256.New()
-	var assets []string
+	var assets []Asset // Changed type
 	contribMap := make(map[string]aha.AHAMetrics)
 	zkpMap := make(map[string]zkp.Proof)
 	
@@ -83,9 +84,25 @@ func CalculateDirHash(root string, ignorePatterns []string) (
 		relPath, _ := filepath.Rel(root, file)
 		cleanPath := filepath.ToSlash(relPath)
 
-		assets = append(assets, cleanPath)
+		// Calculate Logic Hash for .go files
+		var logicHash string
+		if strings.HasSuffix(file, ".go") {
+			if lh, err := hash.ComputeLogicHash(file); err == nil {
+				logicHash = lh
+			}
+		}
+
+		asset := Asset{
+			Path:      cleanPath,
+			RawHash:   fileHash,
+			LogicHash: logicHash,
+		}
+		assets = append(assets, asset)
+		
 		globalHasher.Write([]byte(cleanPath))
 		globalHasher.Write([]byte(fileHash))
+		// Note: We intentionally hash only RawHash into GlobalHash to maintain strict integrity chain.
+		// LogicHash is for "Fuzzy Verification".
 
 		// Analyze AHA
 		metrics, err := aha.AnalyzeFile(file, root)

@@ -7,15 +7,24 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
+	"github.com/windgeek/HCP/pkg/config"
 	"github.com/windgeek/HCP/pkg/entropy"
 	"golang.org/x/term"
 )
 
 var vibeCmd = &cobra.Command{
 	Use:   "vibe",
-	Short: "Capture biological entropy (Proof of Hesitation)",
-	Long:  `Interactive session to capture keystroke dynamics and generate a Biological Entropy Proof.`,
+	Short: "Capture your biological entropy (Vibe Coding)",
+	Long:  "Interactive session to record keystroke dynamics and generate a unique entropy seed.",
 	Run: func(cmd *cobra.Command, args []string) {
+		// Load Config to find default identity just in case, or output path
+		// Actually vibe doesn't use identity key directly, it Generates session data.
+		// But let's respect standard config loading if we need to save session to .hcp/
+
+		// For now, vibe saves to current dir or .hcp
+		// Let's use config to verify home dir setup.
+		cfg, _ := config.LoadConfig("")
+		_ = cfg
 		fmt.Println("HCP Biological Entropy Engine (BEE)")
 		fmt.Println("-----------------------------------")
 		fmt.Println("Please type the following phrase exactly as shown, then press Enter:")

@@ -1,43 +1,179 @@
 {
   "version": "v1-release",
-  "author": "bc1qfvw60hj7ypl6uceuvmy5escysw9kvg8dlnshvz",
-  "public_key": "0251fa4ab50beeb8f3c0073405289178116f1affe38a9374c8582b84b9c9be5c83",
-  "content_hash": "4d52e2606b8034afdd7db5b3c95cf079da90ef004d61dc9ba48feaa1ac7133f8",
-  "timestamp": 1770717639,
+  "author": "bc1qdrk4uaxjpehac8st28zexduz8l7t9hxvc5frhw",
+  "public_key": "02099894795b6bafec75460f8d333863cff3450d2ea37d97eda7e47e0ef7a507ba",
+  "content_hash": "cf532ef81728f5fe6d8039a882cbc781081521c411ebfd8b3d221d8ee06ce171",
+  "parent_hash": "0cb6e7715d25fe7334edb93261728c2f76ec5dea4deec2416b1e6f027d8abfca",
+  "timestamp": 1770720922,
   "entropy_dna": "universal-release",
   "assets": [
-    "LICENSE",
-    "Makefile",
-    "README.md",
-    "cmd/hcp-release/main.go",
-    "cmd/hcp/anchor.go",
-    "cmd/hcp/keygen.go",
-    "cmd/hcp/main.go",
-    "cmd/hcp/sign.go",
-    "cmd/hcp/verify.go",
-    "cmd/hcp/vibe.go",
-    "go.mod",
-    "go.sum",
-    "hcp",
-    "hcp-release",
-    "pkg/aha/aha.go",
-    "pkg/cognitive/complexity.go",
-    "pkg/cognitive/complexity_test.go",
-    "pkg/entropy/entropy.go",
-    "pkg/entropy/entropy_test.go",
-    "pkg/identity/identity.go",
-    "pkg/identity/identity_test.go",
-    "pkg/manifest/hashing.go",
-    "pkg/manifest/manifest.go",
-    "pkg/manifest/manifest_test.go",
-    "pkg/manifest/verify.go",
-    "pkg/zkp/mock.go",
-    "spec/HCP-Daemon.md",
-    "spec/RFC-001.md",
-    "spec/RFC-002.md",
-    "spec/RFC-003.md",
-    "spec/RFC-004.md",
-    "test.txt"
+    {
+      "path": "LICENSE",
+      "raw_hash": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "Makefile",
+      "raw_hash": "f7f0886e56595b9123a628fbfa3b648191d18ad269b60578d0c7d7996f3ed547"
+    },
+    {
+      "path": "README.md",
+      "raw_hash": "a5855351e18e438d91b659ca1360ec50505cb0fabaa7a746cbedf9e2490c6491"
+    },
+    {
+      "path": "cmd/hcp-release/main.go",
+      "raw_hash": "498ea47ebae4e9bf0273dc1d75d63270aa8ba690a44b57912c6540df6366713f",
+      "logic_hash": "d6e80c3c95d44eb723aeb33c31c53ae962aad48bdae239fc3ea052b44d9e142a"
+    },
+    {
+      "path": "cmd/hcp/anchor.go",
+      "raw_hash": "025dae8d2dece6a1b36499f9eccdcdcdcf046f101998f8fbcefee506490b53d2",
+      "logic_hash": "03d765866331ca5a090c97acb1af1a4abb74454fefccf9175f1156e9d26f89c0"
+    },
+    {
+      "path": "cmd/hcp/init.go",
+      "raw_hash": "955652baf2f264fba5fff9d012fae6ff425d3970c476143e47d8554b8457689f",
+      "logic_hash": "d83e242a29fecbae0fd81f7a5433c3148ed3bed4c93ecd4b70ed9b4964c5a23f"
+    },
+    {
+      "path": "cmd/hcp/keygen.go",
+      "raw_hash": "3da951be8e020f779058d672e7f92bc1eeb38b0517a356833cd08c57495dd1b1",
+      "logic_hash": "6cbad7bfceda05e3c3224994dda6bddaa652d00abbda22e7425665949adb16bf"
+    },
+    {
+      "path": "cmd/hcp/main.go",
+      "raw_hash": "371c90ef2be9d98ea9ecc8400f744845737bc8bca00135a6aaaa66708fb9757d",
+      "logic_hash": "15c4b54cab9702b59493a6dd80c2bb4bd72e6390e1ca372ef12a8c548de5df00"
+    },
+    {
+      "path": "cmd/hcp/sign.go",
+      "raw_hash": "6f0c4b3d02d3159e5c1be09beb561ce6928e273f87e94c631144b17b4400434f",
+      "logic_hash": "0f0434827a40f81149ace06e46c946eb9230a52964faec75c9367fa151c1b445"
+    },
+    {
+      "path": "cmd/hcp/verify.go",
+      "raw_hash": "b95e5fa4ac0a2dcc824ac6c04432ca61c90d2fda0c5556fd5900d1cb2d40c68f",
+      "logic_hash": "3e5054956d7048869e70bf0aa812b3f354adfa914aa239f135939192e7fe3e20"
+    },
+    {
+      "path": "cmd/hcp/vibe.go",
+      "raw_hash": "d07c2aac4b7c8712b1421de3e41c233b4e6b4fa8a2770be0ab86665e70db4454",
+      "logic_hash": "5ef4c4b4a7fe59acc318217eb0cc4fd966edb27255b0e423fbf0ea8fc76e75c7"
+    },
+    {
+      "path": "go.mod",
+      "raw_hash": "1421119289af9804ec0f5e66e2dc7a365aec6f1f6d43b629178a1826ce0ede31"
+    },
+    {
+      "path": "go.sum",
+      "raw_hash": "95c73017ca40e1d6a216da8b7e9fb02eed76255cfa6587f4da8f562ca5d48530"
+    },
+    {
+      "path": "hcp",
+      "raw_hash": "aeb5d1c3660997d91d6a0de3acb471f4658661771f5442bfacd313f78da13d64"
+    },
+    {
+      "path": "hcp-release",
+      "raw_hash": "f40a8c6ca99cc692d50d492b4cfb10f6bd3e143855d134dfbfb47c116157875a"
+    },
+    {
+      "path": "hello.go",
+      "raw_hash": "eeb785678f52a20f81702ffd5a2a7b0cd0ef4ba9df08071706b7bd1b2a7c51af",
+      "logic_hash": "24be6b0129aa331e9853893769a2bd0f1c399c380b6f666bfb224773a5b61b3e"
+    },
+    {
+      "path": "pkg/aha/aha.go",
+      "raw_hash": "83ced731472ffab87c0bf49ed1dd51ab2a5de971068c63ff3f4e7f095e3e684a",
+      "logic_hash": "0d59ebc1a35eb20e8a2445bba88f7f650c98613644c98b136de05393be3055df"
+    },
+    {
+      "path": "pkg/cognitive/complexity.go",
+      "raw_hash": "9744984ea9b386541f010a370578df8d8b0cd960d9027a7b266f6c218a71c33a",
+      "logic_hash": "68c0382fdf1e3b18d6bfa71c7ef387cd8642943d81096f0c449e8d0940103048"
+    },
+    {
+      "path": "pkg/cognitive/complexity_test.go",
+      "raw_hash": "3fcd5159fd3ac6be96ada98565c83cb035b52058321e823a4fce435525a44033",
+      "logic_hash": "6fa63dbc7bada9e66dc9e1123225e8adc2152b8decb48031ea0e51f81f2cefc8"
+    },
+    {
+      "path": "pkg/config/config.go",
+      "raw_hash": "57759875abacd584cfc69aede8c49f98a142252bd0543b34c656f82bbad433b6",
+      "logic_hash": "1881145a3d6463850bc23aed7172785c99bd2e0e6fb1d74613ded897ce4f289a"
+    },
+    {
+      "path": "pkg/entropy/entropy.go",
+      "raw_hash": "1479557cfc2440c298afee6f2a185123642306535cfe9ca675e4c25a48b60848",
+      "logic_hash": "201e6667ade4b3b55fc3bf7e71468d7cf8971f3520cdb65a4e6b0b63a24da30e"
+    },
+    {
+      "path": "pkg/entropy/entropy_test.go",
+      "raw_hash": "62512fc3ee3fd804bd8be8d0fad0223bcf3d2137b835fc38f00ed4032ea6c22d",
+      "logic_hash": "4336edba63a0db5a5862d39a6f17e359844fd65b8502045375a0f7841e0f997b"
+    },
+    {
+      "path": "pkg/hash/ast.go",
+      "raw_hash": "d33903d31d511b81bea04a0e3f0cb819eeb4e879ea1f651447debaf62fc4518c",
+      "logic_hash": "0c5867581ed98409ae575070bfba97951d7fd2f4751cced9edb6caaa04dba7a2"
+    },
+    {
+      "path": "pkg/identity/identity.go",
+      "raw_hash": "c72b417a8dc4334bb6efa6049eea5acb5be1ef56e059dda35419081efc9f6778",
+      "logic_hash": "d3219421747e1ab2ecb8f92d6b8e08ab380d2c4a19a3201dad88ba54b10efad2"
+    },
+    {
+      "path": "pkg/identity/identity_test.go",
+      "raw_hash": "160889675e76c10a6822f0c05b6d8d43e61bd2c44482b5f4dfd29a6d0b5e6176",
+      "logic_hash": "ad68046fa417f62319be0d14688eb0fb1a93a149fc0c163e90d97fd5721e15f1"
+    },
+    {
+      "path": "pkg/manifest/hashing.go",
+      "raw_hash": "a1abb0b7b6f945447a60ecc156530448a9969b4f79c9dc0394d889f4d5584c5b",
+      "logic_hash": "e8a3aca4e98bbefaa2326587f2c60d5b9133ca8208ddccd8281466240ed85997"
+    },
+    {
+      "path": "pkg/manifest/manifest.go",
+      "raw_hash": "ab2fbc2e7716ed0e67644fdae1dfde3db60e42587c0a6ab585edfeaee5b4f0d2",
+      "logic_hash": "c44310be69fb71f9c7c05c928387fb601f164e17c4b2deb43d3f63627eed2a1e"
+    },
+    {
+      "path": "pkg/manifest/manifest_test.go",
+      "raw_hash": "1cca675ca68186137eb03e763477da845f0344ab224ffb3728495747c3b4e470",
+      "logic_hash": "ad986cdbb4b907a793b9242f34191f9458d419d3a1500d272ac26acefbfa6961"
+    },
+    {
+      "path": "pkg/manifest/verify.go",
+      "raw_hash": "807617f1916dd120e3fa32aabdea2d1331d51ff66d48f8855a0c82ca7495955a",
+      "logic_hash": "545864256bde809c5b016452f562e8b5d072c4310e62e173e797a051cf214e5b"
+    },
+    {
+      "path": "pkg/zkp/mock.go",
+      "raw_hash": "6e2d3c5a06b6c5261c3cc226e9a715966773e1681f1818df4f8988866d779d37",
+      "logic_hash": "a6b3f1859133d67ad92af73d3f5f404557ae9d1277282e7270abda3359b9fa78"
+    },
+    {
+      "path": "spec/HCP-Daemon.md",
+      "raw_hash": "30a96c0c961618728dfa272ae3f7188bd0a591135ee07d6202fe976fc549d233"
+    },
+    {
+      "path": "spec/RFC-001.md",
+      "raw_hash": "2c68d7f2cf220d980ff2df86c02a5e1e75b6123f3c6106c497aa818b68ba9872"
+    },
+    {
+      "path": "spec/RFC-002.md",
+      "raw_hash": "063ff4a0806a62326fdab2ef8aae598cece8fae5a3f6e4ffb1cf91a346588ae6"
+    },
+    {
+      "path": "spec/RFC-003.md",
+      "raw_hash": "5011d80f238db7379c2d00dd7e04b8ecda9f02ec2873cc618f36bd26bf570632"
+    },
+    {
+      "path": "spec/RFC-004.md",
+      "raw_hash": "1336aabdca3491dc033100b3c65735792feb0d9b8109a399f02cfc87918e72f3"
+    },
+    {
+      "path": "test.txt",
+      "raw_hash": "a1fff0ffefb9eace7230c24e50731f0a91c62f9cefdfe77121c2f607125dffae"
+    }
   ],
   "contribution_map": {
     "LICENSE": {
@@ -45,20 +181,24 @@
       "aha_score": 10
     },
     "Makefile": {
-      "commits": 1,
-      "aha_score": 10
+      "commits": 2,
+      "aha_score": 20
     },
     "README.md": {
-      "commits": 3,
-      "aha_score": 30
+      "commits": 4,
+      "aha_score": 40
     },
     "cmd/hcp-release/main.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "cmd/hcp/anchor.go": {
       "commits": 1,
       "aha_score": 10
+    },
+    "cmd/hcp/init.go": {
+      "commits": 0,
+      "aha_score": 0
     },
     "cmd/hcp/keygen.go": {
       "commits": 1,
@@ -69,50 +209,62 @@
       "aha_score": 10
     },
     "cmd/hcp/sign.go": {
-      "commits": 1,
-      "aha_score": 10
+      "commits": 2,
+      "aha_score": 20
     },
     "cmd/hcp/verify.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "cmd/hcp/vibe.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "go.mod": {
-      "commits": 1,
-      "aha_score": 10
+      "commits": 2,
+      "aha_score": 20
     },
     "go.sum": {
-      "commits": 1,
-      "aha_score": 10
+      "commits": 2,
+      "aha_score": 20
     },
     "hcp": {
       "commits": 0,
       "aha_score": 0
     },
     "hcp-release": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "hello.go": {
       "commits": 0,
       "aha_score": 0
     },
     "pkg/aha/aha.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "pkg/cognitive/complexity.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "pkg/cognitive/complexity_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/config/config.go": {
       "commits": 0,
       "aha_score": 0
     },
     "pkg/entropy/entropy.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "pkg/entropy/entropy_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/hash/ast.go": {
       "commits": 0,
       "aha_score": 0
     },
@@ -125,24 +277,24 @@
       "aha_score": 10
     },
     "pkg/manifest/hashing.go": {
-      "commits": 0,
-      "aha_score": 0
-    },
-    "pkg/manifest/manifest.go": {
       "commits": 1,
       "aha_score": 10
+    },
+    "pkg/manifest/manifest.go": {
+      "commits": 2,
+      "aha_score": 20
     },
     "pkg/manifest/manifest_test.go": {
       "commits": 1,
       "aha_score": 10
     },
     "pkg/manifest/verify.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "pkg/zkp/mock.go": {
-      "commits": 0,
-      "aha_score": 0
+      "commits": 1,
+      "aha_score": 10
     },
     "spec/HCP-Daemon.md": {
       "commits": 1,
@@ -153,8 +305,8 @@
       "aha_score": 10
     },
     "spec/RFC-002.md": {
-      "commits": 1,
-      "aha_score": 10
+      "commits": 2,
+      "aha_score": 20
     },
     "spec/RFC-003.md": {
       "commits": 1,
@@ -171,165 +323,185 @@
   },
   "cognitive_proofs": {
     "LICENSE": {
-      "proof_id": "76a0e989647cb59388c6484792621e457f7d9132832c0badbef666f51d414b4c",
-      "timestamp": 1770717638,
+      "proof_id": "1c11a56d8695e12e5fc54e85eba78137debf53456e387bce29757c296bf71b6d",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=17;commits=1"
     },
     "Makefile": {
-      "proof_id": "09e29a0d9dcc03c0f54fb7cfbc68feb094c1d835527155976b3255c9f8c80070",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=1;commits=1"
+      "proof_id": "e730621a9518cb0f37d15408a112e6b44f1e2e6a249d7f6e1ad8be1403d6d95a",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=1;commits=2"
     },
     "README.md": {
-      "proof_id": "455436579587257300cacae5691a148b86b3b13fbc4f2fbd2490de2b105450de",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=12;commits=3"
+      "proof_id": "fd52153dfb0d768fc11ae55eb430b3ef4b8474ede178d28db737d427fd859d54",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=12;commits=4"
     },
     "cmd/hcp-release/main.go": {
-      "proof_id": "0639f6dd79f8d1fae8572421577c3b5db5287ed228fe37b45d9088cef828ca60",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=25;commits=0"
+      "proof_id": "c90955ddf2801cb1433c88fc480044c505b8fdf5c6d9444c97a74dad5cc02d0b",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=28;commits=1"
     },
     "cmd/hcp/anchor.go": {
-      "proof_id": "fd03ff8877128b158b3b93677eca5698703a4137082220470143d9eb179758d2",
-      "timestamp": 1770717639,
+      "proof_id": "984a48cc86e00fa0df8ad297341f94cd338d57446cf313ad9de61fc510f40e53",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=8;commits=1"
     },
+    "cmd/hcp/init.go": {
+      "proof_id": "fdaa51b45719737feff105c9fd9f40d7bfad3dbcdd4c5a2250a15c3cc4257d2f",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=5;commits=0"
+    },
     "cmd/hcp/keygen.go": {
-      "proof_id": "0c82493d357c3e882ab11afe02e99a422cd0b5d5d09f2772cb3421bb74bc2bff",
-      "timestamp": 1770717639,
+      "proof_id": "ea6edbb71254c34e1b2e28589e7fc96af9b0df19c97dd2b29ba18992a1195558",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=7;commits=1"
     },
     "cmd/hcp/main.go": {
-      "proof_id": "7067f9a4ad73eb3625382102993e7ca17f889ac50ceb58143154e6c1608f7902",
-      "timestamp": 1770717639,
+      "proof_id": "1a0974b04f482f86f577cf0a05a7d2e805c327c754d5213aea5ec80e6d5615c1",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=2;commits=1"
     },
     "cmd/hcp/sign.go": {
-      "proof_id": "0acb173ee1b3141e1c07a409832f67502dd6431726abc5c52f098b39018ce523",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=8;commits=1"
+      "proof_id": "4ea1533a2e5afc03423da6f4c09fe2fc57a8892240ba83f99399b7b612d64339",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=8;commits=2"
     },
     "cmd/hcp/verify.go": {
-      "proof_id": "38935355f8af390929c90b28c81e5880e9493a3c2dff5ad8e324ffa3e10cdcef",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=13;commits=0"
+      "proof_id": "96b69319f11b973e8169b863c70e476c154a8e4cc1ea903d595d13f7373e273e",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=22;commits=1"
     },
     "cmd/hcp/vibe.go": {
-      "proof_id": "7d7ed52bcbea85d25b20a18a489b01b84264ad20b7a672fdcdb8bdbced892736",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=11;commits=0"
+      "proof_id": "cb99ebc4f1f139600d047ed3f55643773aa5404f5cb0ae85c7ff35e08868aa28",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=11;commits=1"
     },
     "go.mod": {
-      "proof_id": "c7a4bff7820855817b407ae7499b270f18fac912f35eea9081997fe74eadce32",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=2;commits=1"
+      "proof_id": "215a54d7868fc8544405a48acecea71abdee89f8f6d3eddd0e47fe76b5c083d2",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=2;commits=2"
     },
     "go.sum": {
-      "proof_id": "c6ccb3806772d4b654ed8559a0a03b3a70ed98d6d1b971a29cb93ea9f6411aa0",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=13;commits=1"
+      "proof_id": "f73aa0140e44bd66fe81a12e11fc15018954c7674f2f851a99dcc8152418dc14",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=13;commits=2"
     },
     "hcp": {
-      "proof_id": "395bba47b918dbb6945a48a3e7c2459ef17c0bf2dd5508b1d387aa11fdab2c7d",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=4156;commits=0"
+      "proof_id": "bc99b623f11b2fd9987b0ed5d59adff82d7e5081d3f88d779b101145c26fb6aa",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=4271;commits=0"
     },
     "hcp-release": {
-      "proof_id": "6cfed5e3d1a704b78da15f16a8496ada59c6f3fab36f39b0edbf3cb94fb8ac55",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=2041;commits=0"
+      "proof_id": "aa31bd80f8e1141a7b5c5ea4707cff52450669f7c8135921575e80cb79abd03b",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=2278;commits=1"
+    },
+    "hello.go": {
+      "proof_id": "0f479fea95996277be0cec6fa3088525e7d8068e0f6cb1b3b56aee9fcbebd09d",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=1;commits=0"
     },
     "pkg/aha/aha.go": {
-      "proof_id": "46c1fa92cc07dc82dca98144a74719740961f114d6ec646925967a0da3d0acb7",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=5;commits=0"
+      "proof_id": "5673ace809fec66e58ec80e6590f8c509ade6c8d4b41cf470b0da01aa61efa7b",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=5;commits=1"
     },
     "pkg/cognitive/complexity.go": {
-      "proof_id": "4e1339ed4f5f954d5af2b86c6db94f260b37a1c98aa129209ca342e65ecd6575",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=14;commits=0"
+      "proof_id": "903ba3ae4481a1bbf75ac9c3ebd0f61e417a851bcb2cbb1e078f65e775de98a3",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=14;commits=1"
     },
     "pkg/cognitive/complexity_test.go": {
-      "proof_id": "4e8f09101b438557c3b899a94527dc844c0575c9d35a5406a2ec344c25b5f090",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=6;commits=0"
+      "proof_id": "1647687bd82db0f520b587295f34af2f55246419a556be17b2d5ca5baaef4ee1",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=6;commits=1"
+    },
+    "pkg/config/config.go": {
+      "proof_id": "bbb3ba5416406c3419614082269d661db553879259bfabbca0244823d379c304",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=16;commits=0"
     },
     "pkg/entropy/entropy.go": {
-      "proof_id": "20d8c7ee10d6d0bbfc950e43662fe411bd320b00b2c4219292118aa0a4a371cc",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=14;commits=0"
+      "proof_id": "e7b00c06311c64dc9aded854e613eb945428268fbcebab7f18b6738c0d4837fe",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=14;commits=1"
     },
     "pkg/entropy/entropy_test.go": {
-      "proof_id": "90c15569bdb10a5dbedb0b5e0964889afeef53f55e00583e57c83b8733965222",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=6;commits=0"
+      "proof_id": "582aaa6cd1cc578d12a1ff89632096f9d84b28ea9f11739bca832535bee7a958",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=6;commits=1"
+    },
+    "pkg/hash/ast.go": {
+      "proof_id": "994e614c9a74b51f6eb778d56c41cb6e7cedee8d1d8c9f5611aa7fbb9e39f724",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=35;commits=0"
     },
     "pkg/identity/identity.go": {
-      "proof_id": "53179cdea7a77cc73aa13b18a85f35e467c5551de9b7676872be69ff01c88e2c",
-      "timestamp": 1770717639,
+      "proof_id": "5490d9a213d6ed6e649acce8691817f9f194a7a75eebd6434f9938158650c22c",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=20;commits=1"
     },
     "pkg/identity/identity_test.go": {
-      "proof_id": "2715b2df5273f917a1d6bda6e610b407b910ea7b2392744d31f9b823b3aa1f08",
-      "timestamp": 1770717639,
+      "proof_id": "6a705a2a88f507ff0545b8f5007564be578c7e06e3e48ad8a143cab91a649e58",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=8;commits=1"
     },
     "pkg/manifest/hashing.go": {
-      "proof_id": "7da9668bb84d3df296b9dc80f19050066ab27fbcaa9b6f1ccd910aa58fd43008",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=22;commits=0"
+      "proof_id": "ad54c3e7af5301a356a6f1c50f49f6e4803cda8b44a5ae6e239152d3747abd07",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=24;commits=1"
     },
     "pkg/manifest/manifest.go": {
-      "proof_id": "9c5e5da3c354b839a1f9bd9339ca065fd9d35df8c155c896256bbd7748c57a13",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=10;commits=1"
+      "proof_id": "9906fa89a02bb192818bbb746057f7b84e189686931c2dcb025367531b87012a",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=10;commits=2"
     },
     "pkg/manifest/manifest_test.go": {
-      "proof_id": "cf3b41881ad93704d17e52579af023593c1ba4bed8743ba8f605e0dc9a32201f",
-      "timestamp": 1770717639,
+      "proof_id": "43103ca73721c60b9860dfed5281d761cb5ac174a44a63444d185bd2d4ebbd28",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=11;commits=1"
     },
     "pkg/manifest/verify.go": {
-      "proof_id": "2fb301b9547079e6f316bc4966301b4cf2e1b08235d9f98d93cc7c66d15ace1e",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=5;commits=0"
+      "proof_id": "ab0adae7eb1c272305450d3ac5220358db708d99890cde6b45a08228b6a16fe6",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=5;commits=1"
     },
     "pkg/zkp/mock.go": {
-      "proof_id": "ee8c0efa957fd609e461f923f5b66511d4c9902b66ef38185e2e653d6de34ea4",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=3;commits=0"
+      "proof_id": "f352e40ef0fce4e2f5bea5f63225167c064e5a4d4b23e3bfeb449a23fd04ba8a",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=3;commits=1"
     },
     "spec/HCP-Daemon.md": {
-      "proof_id": "3f8e06ebbdeef6a481d42cdfe21e2d154679aebf608db5b0c480ee4f2beb0e55",
-      "timestamp": 1770717639,
+      "proof_id": "25a40dd8848ad51ec518f92730595382927e804245d6befc1ee76ca72b9e9058",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=5;commits=1"
     },
     "spec/RFC-001.md": {
-      "proof_id": "30e2b816d79d8419eb7a3fa793d5b86a75be523a71a5bb3bc8ef9ecf07e50df9",
-      "timestamp": 1770717639,
+      "proof_id": "034d7d3f5ef7a5333058d942b22cce339b5bbf9db883c490d9961347738655e9",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=4;commits=1"
     },
     "spec/RFC-002.md": {
-      "proof_id": "d8a136f0f1d6d6997ba3cdc1aa2b99ab774556f41e043c6fdfaf1d60131e7e90",
-      "timestamp": 1770717639,
-      "public_input": "cyclomatic=5;commits=1"
+      "proof_id": "d4c3435958fe51f27af88211ac6ee30b3a205c1df06e04dfa582e8a644a4b9d8",
+      "timestamp": 1770720922,
+      "public_input": "cyclomatic=5;commits=2"
     },
     "spec/RFC-003.md": {
-      "proof_id": "938a9d119009ddec5ec62399dd26bcd14f89f6a3cbfca2210776fb09bf39dfcd",
-      "timestamp": 1770717639,
+      "proof_id": "44fddc5055ffe26f360b3005aedf44ecf9d09dcddd8808b228d639a70ddde7b7",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=5;commits=1"
     },
     "spec/RFC-004.md": {
-      "proof_id": "8f68e007ed84979bbd87fff59d819cb6399fc9c8d480d39bbc4d7355066eab4e",
-      "timestamp": 1770717639,
+      "proof_id": "d6d622f711ac1d5ae023c8356baed565f0dc402ea3d2b36ec4db520d98a74193",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=4;commits=1"
     },
     "test.txt": {
-      "proof_id": "9eed5b0d2ea8980515570e8ce88e36b7454ffae4b030f43c4d3bfc492ca0526f",
-      "timestamp": 1770717639,
+      "proof_id": "26e0dc0476a30803ceca86c78d666afc2cc7426b95f6e5a512746b890dae1dc9",
+      "timestamp": 1770720922,
       "public_input": "cyclomatic=1;commits=0"
     }
   },
-  "signature": "304402203f650aadf67e997e4ad31e32ec0645e8f176b0088066b81342225b8646088b5902204da2d55c6cc0b048398851422d1e9ccd4a7559d8bb87902e9161d7c05854c0b4"
+  "signature": "3045022100c7163ba9da9764a648b0529a7bbf960602aaaddf9fa140f9b1d6fe816bb058fd022035b82c3ee3bee4eb3eae9bdc435c016aa854f83144b10f20821c9f27d432a1a4"
 }

@@ -4,10 +4,10 @@ import (
 	"encoding/hex"
 	"fmt"
 	"os"
-	"path/filepath"
 
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/spf13/cobra"
+	"github.com/windgeek/HCP/pkg/config"
 	"github.com/windgeek/HCP/pkg/identity"
 	"github.com/windgeek/HCP/pkg/manifest"
 )
@@ -19,16 +19,17 @@ var signCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		filePath := args[0]
 
-		// 1. Load Identity
-		home, err := os.UserHomeDir()
+		// 1. Load Config
+		keyPath, _ := cmd.Flags().GetString("key")
+		cfg, err := config.LoadConfig(keyPath)
 		if err != nil {
-			fmt.Printf("Error getting home directory: %v\n", err)
+			fmt.Printf("Error loading config: %v\n", err)
 			os.Exit(1)
 		}
-		identityPath := filepath.Join(home, ".hcp", "identity.key")
+		identityPath := cfg.IdentityKeyPath
 
 		if _, err := os.Stat(identityPath); os.IsNotExist(err) {
-			fmt.Println("Identity not found. Please run 'hcp keygen' first.")
+			fmt.Printf("Identity not found at %s. Please run 'hcp keygen' or check config.\n", identityPath)
 			os.Exit(1)
 		}
 
@@ -77,5 +78,6 @@ var signCmd = &cobra.Command{
 }
 
 func init() {
+	signCmd.Flags().String("key", "", "Path to identity key file")
 	rootCmd.AddCommand(signCmd)
 }

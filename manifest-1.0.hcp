@@ -1,0 +1,492 @@
+{
+  "version": "v1-release",
+  "author": "bc1qxxhpmzvrkzthcptkad9nszw3zu0674aakxdyku",
+  "public_key": "02d5f9db7e3b8846db5cb0466b77abff24c010f3a114d51f019c4506e9b157b9d6",
+  "content_hash": "527ad5b66d876a2d62d44e5250655a2be3ca53fe7af1b90e4f690b63b3a7e27a",
+  "timestamp": 1770721397,
+  "entropy_dna": "universal-release",
+  "assets": [
+    {
+      "path": "LICENSE",
+      "raw_hash": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "Makefile",
+      "raw_hash": "f7f0886e56595b9123a628fbfa3b648191d18ad269b60578d0c7d7996f3ed547"
+    },
+    {
+      "path": "README.md",
+      "raw_hash": "9ae843b9e419edab547e676f03b094a3b473bd83b0bdb4b0f8a81ea5ae062d69"
+    },
+    {
+      "path": "cmd/hcp-release/main.go",
+      "raw_hash": "498ea47ebae4e9bf0273dc1d75d63270aa8ba690a44b57912c6540df6366713f",
+      "logic_hash": "d6e80c3c95d44eb723aeb33c31c53ae962aad48bdae239fc3ea052b44d9e142a"
+    },
+    {
+      "path": "cmd/hcp/anchor.go",
+      "raw_hash": "025dae8d2dece6a1b36499f9eccdcdcdcf046f101998f8fbcefee506490b53d2",
+      "logic_hash": "03d765866331ca5a090c97acb1af1a4abb74454fefccf9175f1156e9d26f89c0"
+    },
+    {
+      "path": "cmd/hcp/init.go",
+      "raw_hash": "955652baf2f264fba5fff9d012fae6ff425d3970c476143e47d8554b8457689f",
+      "logic_hash": "d83e242a29fecbae0fd81f7a5433c3148ed3bed4c93ecd4b70ed9b4964c5a23f"
+    },
+    {
+      "path": "cmd/hcp/keygen.go",
+      "raw_hash": "3da951be8e020f779058d672e7f92bc1eeb38b0517a356833cd08c57495dd1b1",
+      "logic_hash": "6cbad7bfceda05e3c3224994dda6bddaa652d00abbda22e7425665949adb16bf"
+    },
+    {
+      "path": "cmd/hcp/main.go",
+      "raw_hash": "371c90ef2be9d98ea9ecc8400f744845737bc8bca00135a6aaaa66708fb9757d",
+      "logic_hash": "15c4b54cab9702b59493a6dd80c2bb4bd72e6390e1ca372ef12a8c548de5df00"
+    },
+    {
+      "path": "cmd/hcp/sign.go",
+      "raw_hash": "6f0c4b3d02d3159e5c1be09beb561ce6928e273f87e94c631144b17b4400434f",
+      "logic_hash": "0f0434827a40f81149ace06e46c946eb9230a52964faec75c9367fa151c1b445"
+    },
+    {
+      "path": "cmd/hcp/verify.go",
+      "raw_hash": "b95e5fa4ac0a2dcc824ac6c04432ca61c90d2fda0c5556fd5900d1cb2d40c68f",
+      "logic_hash": "3e5054956d7048869e70bf0aa812b3f354adfa914aa239f135939192e7fe3e20"
+    },
+    {
+      "path": "cmd/hcp/vibe.go",
+      "raw_hash": "d07c2aac4b7c8712b1421de3e41c233b4e6b4fa8a2770be0ab86665e70db4454",
+      "logic_hash": "5ef4c4b4a7fe59acc318217eb0cc4fd966edb27255b0e423fbf0ea8fc76e75c7"
+    },
+    {
+      "path": "go.mod",
+      "raw_hash": "1421119289af9804ec0f5e66e2dc7a365aec6f1f6d43b629178a1826ce0ede31"
+    },
+    {
+      "path": "go.sum",
+      "raw_hash": "95c73017ca40e1d6a216da8b7e9fb02eed76255cfa6587f4da8f562ca5d48530"
+    },
+    {
+      "path": "hcp",
+      "raw_hash": "aeb5d1c3660997d91d6a0de3acb471f4658661771f5442bfacd313f78da13d64"
+    },
+    {
+      "path": "hcp-release",
+      "raw_hash": "f40a8c6ca99cc692d50d492b4cfb10f6bd3e143855d134dfbfb47c116157875a"
+    },
+    {
+      "path": "pkg/aha/aha.go",
+      "raw_hash": "83ced731472ffab87c0bf49ed1dd51ab2a5de971068c63ff3f4e7f095e3e684a",
+      "logic_hash": "0d59ebc1a35eb20e8a2445bba88f7f650c98613644c98b136de05393be3055df"
+    },
+    {
+      "path": "pkg/cognitive/complexity.go",
+      "raw_hash": "9744984ea9b386541f010a370578df8d8b0cd960d9027a7b266f6c218a71c33a",
+      "logic_hash": "68c0382fdf1e3b18d6bfa71c7ef387cd8642943d81096f0c449e8d0940103048"
+    },
+    {
+      "path": "pkg/cognitive/complexity_test.go",
+      "raw_hash": "3fcd5159fd3ac6be96ada98565c83cb035b52058321e823a4fce435525a44033",
+      "logic_hash": "6fa63dbc7bada9e66dc9e1123225e8adc2152b8decb48031ea0e51f81f2cefc8"
+    },
+    {
+      "path": "pkg/config/config.go",
+      "raw_hash": "57759875abacd584cfc69aede8c49f98a142252bd0543b34c656f82bbad433b6",
+      "logic_hash": "1881145a3d6463850bc23aed7172785c99bd2e0e6fb1d74613ded897ce4f289a"
+    },
+    {
+      "path": "pkg/entropy/entropy.go",
+      "raw_hash": "1479557cfc2440c298afee6f2a185123642306535cfe9ca675e4c25a48b60848",
+      "logic_hash": "201e6667ade4b3b55fc3bf7e71468d7cf8971f3520cdb65a4e6b0b63a24da30e"
+    },
+    {
+      "path": "pkg/entropy/entropy_test.go",
+      "raw_hash": "62512fc3ee3fd804bd8be8d0fad0223bcf3d2137b835fc38f00ed4032ea6c22d",
+      "logic_hash": "4336edba63a0db5a5862d39a6f17e359844fd65b8502045375a0f7841e0f997b"
+    },
+    {
+      "path": "pkg/hash/ast.go",
+      "raw_hash": "d33903d31d511b81bea04a0e3f0cb819eeb4e879ea1f651447debaf62fc4518c",
+      "logic_hash": "0c5867581ed98409ae575070bfba97951d7fd2f4751cced9edb6caaa04dba7a2"
+    },
+    {
+      "path": "pkg/identity/identity.go",
+      "raw_hash": "c72b417a8dc4334bb6efa6049eea5acb5be1ef56e059dda35419081efc9f6778",
+      "logic_hash": "d3219421747e1ab2ecb8f92d6b8e08ab380d2c4a19a3201dad88ba54b10efad2"
+    },
+    {
+      "path": "pkg/identity/identity_test.go",
+      "raw_hash": "160889675e76c10a6822f0c05b6d8d43e61bd2c44482b5f4dfd29a6d0b5e6176",
+      "logic_hash": "ad68046fa417f62319be0d14688eb0fb1a93a149fc0c163e90d97fd5721e15f1"
+    },
+    {
+      "path": "pkg/manifest/hashing.go",
+      "raw_hash": "a1abb0b7b6f945447a60ecc156530448a9969b4f79c9dc0394d889f4d5584c5b",
+      "logic_hash": "e8a3aca4e98bbefaa2326587f2c60d5b9133ca8208ddccd8281466240ed85997"
+    },
+    {
+      "path": "pkg/manifest/manifest.go",
+      "raw_hash": "ab2fbc2e7716ed0e67644fdae1dfde3db60e42587c0a6ab585edfeaee5b4f0d2",
+      "logic_hash": "c44310be69fb71f9c7c05c928387fb601f164e17c4b2deb43d3f63627eed2a1e"
+    },
+    {
+      "path": "pkg/manifest/manifest_test.go",
+      "raw_hash": "1cca675ca68186137eb03e763477da845f0344ab224ffb3728495747c3b4e470",
+      "logic_hash": "ad986cdbb4b907a793b9242f34191f9458d419d3a1500d272ac26acefbfa6961"
+    },
+    {
+      "path": "pkg/manifest/verify.go",
+      "raw_hash": "807617f1916dd120e3fa32aabdea2d1331d51ff66d48f8855a0c82ca7495955a",
+      "logic_hash": "545864256bde809c5b016452f562e8b5d072c4310e62e173e797a051cf214e5b"
+    },
+    {
+      "path": "pkg/zkp/mock.go",
+      "raw_hash": "6e2d3c5a06b6c5261c3cc226e9a715966773e1681f1818df4f8988866d779d37",
+      "logic_hash": "a6b3f1859133d67ad92af73d3f5f404557ae9d1277282e7270abda3359b9fa78"
+    },
+    {
+      "path": "spec/HCP-Daemon.md",
+      "raw_hash": "30a96c0c961618728dfa272ae3f7188bd0a591135ee07d6202fe976fc549d233"
+    },
+    {
+      "path": "spec/RFC-001.md",
+      "raw_hash": "2c68d7f2cf220d980ff2df86c02a5e1e75b6123f3c6106c497aa818b68ba9872"
+    },
+    {
+      "path": "spec/RFC-002.md",
+      "raw_hash": "063ff4a0806a62326fdab2ef8aae598cece8fae5a3f6e4ffb1cf91a346588ae6"
+    },
+    {
+      "path": "spec/RFC-003.md",
+      "raw_hash": "5011d80f238db7379c2d00dd7e04b8ecda9f02ec2873cc618f36bd26bf570632"
+    },
+    {
+      "path": "spec/RFC-004.md",
+      "raw_hash": "1336aabdca3491dc033100b3c65735792feb0d9b8109a399f02cfc87918e72f3"
+    },
+    {
+      "path": "test.txt",
+      "raw_hash": "a1fff0ffefb9eace7230c24e50731f0a91c62f9cefdfe77121c2f607125dffae"
+    }
+  ],
+  "contribution_map": {
+    "LICENSE": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "Makefile": {
+      "commits": 2,
+      "aha_score": 20
+    },
+    "README.md": {
+      "commits": 4,
+      "aha_score": 40
+    },
+    "cmd/hcp-release/main.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/anchor.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/init.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "cmd/hcp/keygen.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/main.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/sign.go": {
+      "commits": 2,
+      "aha_score": 20
+    },
+    "cmd/hcp/verify.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/vibe.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "go.mod": {
+      "commits": 2,
+      "aha_score": 20
+    },
+    "go.sum": {
+      "commits": 2,
+      "aha_score": 20
+    },
+    "hcp": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "hcp-release": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/aha/aha.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/cognitive/complexity.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/cognitive/complexity_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/config/config.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/entropy/entropy.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/entropy/entropy_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/hash/ast.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/identity/identity.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/identity/identity_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/manifest/hashing.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/manifest/manifest.go": {
+      "commits": 2,
+      "aha_score": 20
+    },
+    "pkg/manifest/manifest_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/manifest/verify.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/zkp/mock.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/HCP-Daemon.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-001.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-002.md": {
+      "commits": 2,
+      "aha_score": 20
+    },
+    "spec/RFC-003.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-004.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "test.txt": {
+      "commits": 0,
+      "aha_score": 0
+    }
+  },
+  "cognitive_proofs": {
+    "LICENSE": {
+      "proof_id": "0cda68ce21dbfa519ff406fdd07dfa2e0413ce9443d3fbbb981b53f693a6f3f1",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=17;commits=1"
+    },
+    "Makefile": {
+      "proof_id": "7e945feeba57f22c4d8cbf6ad4e72ffe0a96981e76ed4697988b38d06a983b50",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=1;commits=2"
+    },
+    "README.md": {
+      "proof_id": "f1712c510e3aa52d1b5eadbe15e6cf3fdf9e46f68931fbd62d8d1c195ec89907",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=13;commits=4"
+    },
+    "cmd/hcp-release/main.go": {
+      "proof_id": "887dd8e2c0a56a1c5ff6fd5bdc5772c61c9a4018ff29b1001653eb5223319869",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=28;commits=1"
+    },
+    "cmd/hcp/anchor.go": {
+      "proof_id": "e48ef38c220a89e060fbca1bada5ae0c85811e0787f0c51ccb6a359d72870086",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=8;commits=1"
+    },
+    "cmd/hcp/init.go": {
+      "proof_id": "92b4ed9782adae9da4875878ea6a6f777b916bd5a5bf2227d68d43598c437c67",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=5;commits=0"
+    },
+    "cmd/hcp/keygen.go": {
+      "proof_id": "4b168d520133fc797549c985b9283e71d5d19855926e744917560763d274a24a",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=7;commits=1"
+    },
+    "cmd/hcp/main.go": {
+      "proof_id": "bad483f40140ad397c5e1590334f12df0193bcf39b06227d7e4c133262c2c43e",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=2;commits=1"
+    },
+    "cmd/hcp/sign.go": {
+      "proof_id": "22c4039e756958ab49dfa8f3647a16f3505f8fed1f9ece43dec38b42ff852cf0",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=8;commits=2"
+    },
+    "cmd/hcp/verify.go": {
+      "proof_id": "f9465fc0f45afa137e9116a93dc4267fa573d480efbffca779378789ddcde2bc",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=22;commits=1"
+    },
+    "cmd/hcp/vibe.go": {
+      "proof_id": "48a2ba2f5360a1c693616cdbfdb90477b4412dd0736e89d2342df2a40497f1cb",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=11;commits=1"
+    },
+    "go.mod": {
+      "proof_id": "40615519100517d8b75205dccd920a0679cb0d6887adb972a4347389c5e64736",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=2;commits=2"
+    },
+    "go.sum": {
+      "proof_id": "51ce2826891ec55ed752ba69a9d6c618463c65b2c3be8836875267d6c301f346",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=13;commits=2"
+    },
+    "hcp": {
+      "proof_id": "966045a3733c6ccaacbf52f00d78a02f93ed1809ba93ad711d09bbb73a5c9fc4",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=4271;commits=0"
+    },
+    "hcp-release": {
+      "proof_id": "fbef6349896317bff795ac3c26a3beaa75934f024597a15a9b0b849f79a55059",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=2278;commits=1"
+    },
+    "pkg/aha/aha.go": {
+      "proof_id": "290e6b25f69ba6d458d8ec95233e163f2a95f245c3f027d101a607ec665377ce",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "pkg/cognitive/complexity.go": {
+      "proof_id": "db2cf131afad862432760e090c3533827be4c573219e0f4b6051660e279cf900",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=14;commits=1"
+    },
+    "pkg/cognitive/complexity_test.go": {
+      "proof_id": "626ecd048eb011e10010770cbd823516313ca3cc5067275573311e475ed3f59f",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=6;commits=1"
+    },
+    "pkg/config/config.go": {
+      "proof_id": "d21342e38a8ad4991782520e0f431b780b7515c587f894f0c6266df30b8e92af",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=16;commits=0"
+    },
+    "pkg/entropy/entropy.go": {
+      "proof_id": "c0ca61c06f3b33425bfaac6e9ea4ff879a6e6cdadcd6c6ff469a339d4eb273d2",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=14;commits=1"
+    },
+    "pkg/entropy/entropy_test.go": {
+      "proof_id": "f2a2f6cb494fad1ca060d14af2b99ada2d2deeb2dbec7ad0a9828580229905b9",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=6;commits=1"
+    },
+    "pkg/hash/ast.go": {
+      "proof_id": "adf9f277030a8cd47f42a0c5d8b29927805c6ec875ff2ff7e9001653f0d7b34d",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=35;commits=0"
+    },
+    "pkg/identity/identity.go": {
+      "proof_id": "c4415d4d741c4b64f551297ca83bdf73c80baf538ef7a3ea37ba4ca3a2f5b160",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=20;commits=1"
+    },
+    "pkg/identity/identity_test.go": {
+      "proof_id": "dbda4f1570d0bfb22f25915763194905121900b3860e59fce6d25f4d20eab2d5",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=8;commits=1"
+    },
+    "pkg/manifest/hashing.go": {
+      "proof_id": "5ab426483cb9f02ab398587502e3f2b14bbdfb65e4ba2173ecf4aa02839caad5",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=24;commits=1"
+    },
+    "pkg/manifest/manifest.go": {
+      "proof_id": "4b61ee90bf671657eb2bbb78fad21d9550faea008a2c833ddebe4412df8ca9f0",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=10;commits=2"
+    },
+    "pkg/manifest/manifest_test.go": {
+      "proof_id": "603d2927141a6832bce318bb1f7875ecdc6e1953ecd780059a8d8c0ac872d832",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=11;commits=1"
+    },
+    "pkg/manifest/verify.go": {
+      "proof_id": "cc87484126c91e5eeee649dac277f12aaf6a298520a09aeaea64d9e18f723e6d",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "pkg/zkp/mock.go": {
+      "proof_id": "7505c29f4dbfa6ca78d608dbe4b3616fd84bba4e744e9f921742a228b5ef746b",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=3;commits=1"
+    },
+    "spec/HCP-Daemon.md": {
+      "proof_id": "3c55b31df1ab91d943debd2f6d006010b5ad4d68746c22366ad70f82a410864d",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "spec/RFC-001.md": {
+      "proof_id": "535e73b4b6b73a239f288016646cb6351350396e08fd0096750aece33b44dc10",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=4;commits=1"
+    },
+    "spec/RFC-002.md": {
+      "proof_id": "7c1d42314092c86591d00ac6e3fee76334e105d9c8372fd57fbca6441734d2f5",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=5;commits=2"
+    },
+    "spec/RFC-003.md": {
+      "proof_id": "0bd0ab8be2abe44615eee4cfacb37a9c485c743197f9c3ef0ac85870487bd56a",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "spec/RFC-004.md": {
+      "proof_id": "e3c29039ba53a28d5a03dcf40007a68f32c4806b317ec08baa2d2c0df4024229",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=4;commits=1"
+    },
+    "test.txt": {
+      "proof_id": "7a2f1af6327a99915e9d6de6d47abef7dbfee79679683b3575c45727d12477a2",
+      "timestamp": 1770721388,
+      "public_input": "cyclomatic=1;commits=0"
+    }
+  },
+  "signature": "3044022022ad09bec0dc77ec55c3cb51dca148db24e6ddec87fdec39a33e686bef7436cd02202e7aafcc5312a9635b2f47ba1036bb141f85354abcb4fc9dd82f8f7dee4d4a4f"
+}

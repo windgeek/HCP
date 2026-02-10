@@ -16,18 +16,26 @@ import (
 	"github.com/windgeek/HCP/pkg/zkp"
 )
 
+// Asset represents a single file in the release.
+type Asset struct {
+	Path      string `json:"path"`
+	RawHash   string `json:"raw_hash"`
+	LogicHash string `json:"logic_hash,omitempty"`
+}
+
 // Manifest represents the HCP Proof of Humanity.
 type Manifest struct {
-	Version     string `json:"version"`
-	Author      string `json:"author"`       // Author's Address
-	PublicKey   string `json:"public_key"`   // Hex encoded public key (added Phase 5)
-	ContentHash string `json:"content_hash"` // SHA256 of the content
-	Timestamp   int64  `json:"timestamp"`
-	EntropyDNA      string                    `json:"entropy_dna"` // Random entropy for now
-	Assets          []string                  `json:"assets,omitempty"`
+	Version         string                    `json:"version"`
+	Author          string                    `json:"author"`       // Author's Address
+	PublicKey       string                    `json:"public_key"`   // Hex encoded public key (added Phase 5)
+	ContentHash     string                    `json:"content_hash"` // SHA256 of the content
+	ParentHash      string                    `json:"parent_hash,omitempty"` // Provenance Chain (added Phase 6)
+	Timestamp       int64                     `json:"timestamp"`
+	EntropyDNA      string                    `json:"entropy_dna"`      // Random entropy for now
+	Assets          []Asset                   `json:"assets,omitempty"` // Changed to []Asset in Phase 6
 	ContributionMap map[string]aha.AHAMetrics `json:"contribution_map,omitempty"`
 	CognitiveProofs map[string]zkp.Proof      `json:"cognitive_proofs,omitempty"` // Added Phase 4
-	Signature       string                    `json:"signature"` // Hex encoded signature
+	Signature       string                    `json:"signature"`                  // Hex encoded signature
 }
 
 // NewManifest creates a new Manifest for a given file.
@@ -60,22 +68,24 @@ func (m *Manifest) Sign(key *btcec.PrivateKey) error {
 	// 1. Serialize for signing (canonical JSON)
 	// We need a stable representation. For simplicity, we create a struct without signature.
 	type payload struct {
-		Version     string `json:"version"`
-		Author      string `json:"author"`
-		PublicKey   string `json:"public_key"`
-		ContentHash string `json:"content_hash"`
-		Timestamp   int64    `json:"timestamp"`
+		Version         string                    `json:"version"`
+		Author          string                    `json:"author"`
+		PublicKey       string                    `json:"public_key"`
+		ContentHash     string                    `json:"content_hash"`
+		ParentHash      string                    `json:"parent_hash,omitempty"`
+		Timestamp       int64                     `json:"timestamp"`
 		EntropyDNA      string                    `json:"entropy_dna"`
-		Assets          []string                  `json:"assets,omitempty"`
+		Assets          []Asset                   `json:"assets,omitempty"`
 		ContributionMap map[string]aha.AHAMetrics `json:"contribution_map,omitempty"`
 		CognitiveProofs map[string]zkp.Proof      `json:"cognitive_proofs,omitempty"`
 	}
 	p := payload{
-		Version:     m.Version,
-		Author:      m.Author,
-		PublicKey:   m.PublicKey,
-		ContentHash: m.ContentHash,
-		Timestamp:   m.Timestamp,
+		Version:         m.Version,
+		Author:          m.Author,
+		PublicKey:       m.PublicKey,
+		ContentHash:     m.ContentHash,
+		ParentHash:      m.ParentHash,
+		Timestamp:       m.Timestamp,
 		EntropyDNA:      m.EntropyDNA,
 		Assets:          m.Assets,
 		ContributionMap: m.ContributionMap,

@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"crypto/sha256"
 	"encoding/hex"
 	"flag"
 	"fmt"
@@ -11,6 +12,7 @@ import (
 	"time"
 
 	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/windgeek/HCP/pkg/config"
 	"github.com/windgeek/HCP/pkg/identity"
 	"github.com/windgeek/HCP/pkg/manifest"
 	"golang.org/x/term"
@@ -19,6 +21,8 @@ import (
 func main() {
 	// 1. Parse Flags
 	targetPath := flag.String("path", ".", "Path to the directory to release")
+	keyPath := flag.String("key", "", "Path to identity key file")
+	dryRun := flag.Bool("dry-run", false, "Preview changes without writing to disk")
 	flag.Parse()
 
 	// Resolve absolute path for scanning
@@ -92,15 +96,15 @@ func main() {
 	}
 
 	// 5. Load Identity
-	home, err := os.UserHomeDir()
+	cfg, err := config.LoadConfig(*keyPath)
 	if err != nil {
-		fmt.Printf("Error getting home directory: %v\n", err)
+		fmt.Printf("Error loading config: %v\n", err)
 		os.Exit(1)
 	}
-	identityPath := filepath.Join(home, ".hcp", "identity.key")
+	identityPath := cfg.IdentityKeyPath
 
 	if _, err := os.Stat(identityPath); os.IsNotExist(err) {
-		fmt.Println("Identity not found. Please run 'hcp keygen' first.")
+		fmt.Printf("Identity not found at %s. Please run 'hcp keygen' or check config.\n", identityPath)
 		os.Exit(1)
 	}
 
@@ -141,17 +145,46 @@ func main() {
 	
 	pubKeyHex := hex.EncodeToString(key.PubKey().SerializeCompressed())
 
-	// 6. Create Manifest
+	// 6. Check for Parent Manifest (Evolutionary Chain)
+	var parentHash string
+	if _, err := os.Stat(finalOutputPath); err == nil {
+		// Existing manifest found (before overwrite)
+		// Wait, finalOutputPath is where we WRITE. If we are versioning, we should check previous latest?
+		// User said: "look for an existing manifest.hcp, take its hash".
+		// We should check 'manifest.hcp' specifically or the one we are about to overwrite/supersede.
+		// Let's check 'manifest.hcp' as the "current state".
+		if data, err := os.ReadFile("manifest.hcp"); err == nil {
+			// Hash it
+			h := sha256.New()
+			h.Write(data)
+			parentHash = hex.EncodeToString(h.Sum(nil))
+			fmt.Printf("Linking to Parent Manifest: %s...\n", parentHash[:8])
+		}
+	}
+
+	// 7. Create Manifest
 	m := manifest.Manifest{
 		Version:     "v1-release",
 		Author:      authAddr,
 		PublicKey:   pubKeyHex,
 		ContentHash: globalHash,
+		ParentHash:  parentHash,
 		Timestamp:   time.Now().Unix(),
 		EntropyDNA:      "universal-release",
 		Assets:          assets,
 		ContributionMap: contribMap,
 		CognitiveProofs: zkpMap,
+	}
+
+	// 7. Sign & Save
+	if *dryRun {
+		fmt.Println("\n[DRY RUN] Manifest Preview:")
+		fmt.Printf("Author:      %s\n", m.Author)
+		fmt.Printf("ContentHash: %s\n", m.ContentHash)
+		fmt.Printf("ParentHash:  %s\n", m.ParentHash)
+		fmt.Printf("Assets:      %d files\n", len(m.Assets))
+		fmt.Println("No files were written.")
+		return
 	}
 
 	// 7. Sign

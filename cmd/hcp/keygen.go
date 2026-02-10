@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 	"os"
-	"path/filepath"
 
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/spf13/cobra"
+	"github.com/windgeek/HCP/pkg/config"
 	"github.com/windgeek/HCP/pkg/identity"
 )
 
@@ -15,13 +15,14 @@ var keygenCmd = &cobra.Command{
 	Short: "Generate a new identity key",
 	Long:  `Generate a new secp256k1 private key and save it loosely encrypted to ~/.hcp/identity.key`,
 	Run: func(cmd *cobra.Command, args []string) {
-		// 1. Determine path
-		home, err := os.UserHomeDir()
+		// 1. Load Config
+		keyPath, _ := cmd.Flags().GetString("key")
+		cfg, err := config.LoadConfig(keyPath)
 		if err != nil {
-			fmt.Printf("Error getting home directory: %v\n", err)
+			fmt.Printf("Error loading config: %v\n", err)
 			os.Exit(1)
 		}
-		identityPath := filepath.Join(home, ".hcp", "identity.key")
+		identityPath := cfg.IdentityKeyPath
 
 		// 2. Check if key already exists
 		if _, err := os.Stat(identityPath); err == nil {
@@ -72,5 +73,6 @@ var keygenCmd = &cobra.Command{
 }
 
 func init() {
+	keygenCmd.Flags().String("key", "", "Path to identity key file")
 	rootCmd.AddCommand(keygenCmd)
 }
