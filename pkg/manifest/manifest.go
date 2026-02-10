@@ -12,20 +12,26 @@ import (
 
 	"github.com/btcsuite/btcd/btcec/v2"
 	"github.com/btcsuite/btcd/btcec/v2/ecdsa"
+	"github.com/windgeek/HCP/pkg/aha"
+	"github.com/windgeek/HCP/pkg/zkp"
 )
 
 // Manifest represents the HCP Proof of Humanity.
 type Manifest struct {
 	Version     string `json:"version"`
 	Author      string `json:"author"`       // Author's Address
+	PublicKey   string `json:"public_key"`   // Hex encoded public key (added Phase 5)
 	ContentHash string `json:"content_hash"` // SHA256 of the content
 	Timestamp   int64  `json:"timestamp"`
-	EntropyDNA  string `json:"entropy_dna"` // Random entropy for now
-	Signature   string `json:"signature"`   // Hex encoded signature
+	EntropyDNA      string                    `json:"entropy_dna"` // Random entropy for now
+	Assets          []string                  `json:"assets,omitempty"`
+	ContributionMap map[string]aha.AHAMetrics `json:"contribution_map,omitempty"`
+	CognitiveProofs map[string]zkp.Proof      `json:"cognitive_proofs,omitempty"` // Added Phase 4
+	Signature       string                    `json:"signature"` // Hex encoded signature
 }
 
 // NewManifest creates a new Manifest for a given file.
-func NewManifest(filePath string, authorAddr string) (*Manifest, error) {
+func NewManifest(filePath string, authorAddr string, pubKey string) (*Manifest, error) {
 	// 1. Calculate Content Hash
 	hash, err := calculateFileHash(filePath)
 	if err != nil {
@@ -41,6 +47,7 @@ func NewManifest(filePath string, authorAddr string) (*Manifest, error) {
 	return &Manifest{
 		Version:     "v1",
 		Author:      authorAddr,
+		PublicKey:   pubKey,
 		ContentHash: hash,
 		Timestamp:   time.Now().Unix(),
 		EntropyDNA:  hex.EncodeToString(entropy),
@@ -55,16 +62,24 @@ func (m *Manifest) Sign(key *btcec.PrivateKey) error {
 	type payload struct {
 		Version     string `json:"version"`
 		Author      string `json:"author"`
+		PublicKey   string `json:"public_key"`
 		ContentHash string `json:"content_hash"`
-		Timestamp   int64  `json:"timestamp"`
-		EntropyDNA  string `json:"entropy_dna"`
+		Timestamp   int64    `json:"timestamp"`
+		EntropyDNA      string                    `json:"entropy_dna"`
+		Assets          []string                  `json:"assets,omitempty"`
+		ContributionMap map[string]aha.AHAMetrics `json:"contribution_map,omitempty"`
+		CognitiveProofs map[string]zkp.Proof      `json:"cognitive_proofs,omitempty"`
 	}
 	p := payload{
 		Version:     m.Version,
 		Author:      m.Author,
+		PublicKey:   m.PublicKey,
 		ContentHash: m.ContentHash,
 		Timestamp:   m.Timestamp,
-		EntropyDNA:  m.EntropyDNA,
+		EntropyDNA:      m.EntropyDNA,
+		Assets:          m.Assets,
+		ContributionMap: m.ContributionMap,
+		CognitiveProofs: m.CognitiveProofs,
 	}
 
 	data, err := json.Marshal(p)

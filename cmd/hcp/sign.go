@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/hex"
 	"fmt"
 	"os"
 	"path/filepath"
@@ -42,14 +43,17 @@ var signCmd = &cobra.Command{
 		}
 
 		// 2. Get Author Address
-		address, err := identity.PubKeyToAddress(key.PubKey(), &chaincfg.MainNetParams)
+		pubKey := key.PubKey()
+		address, err := identity.PubKeyToAddress(pubKey, &chaincfg.MainNetParams)
 		if err != nil {
 			fmt.Printf("Error deriving address: %v\n", err)
 			os.Exit(1)
 		}
+		
+		pubKeyHex := hex.EncodeToString(pubKey.SerializeCompressed())
 
 		// 3. Create Manifest
-		m, err := manifest.NewManifest(filePath, address)
+		m, err := manifest.NewManifest(filePath, address, pubKeyHex)
 		if err != nil {
 			fmt.Printf("Error creating manifest: %v\n", err)
 			os.Exit(1)

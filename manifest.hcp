@@ -1,0 +1,335 @@
+{
+  "version": "v1-release",
+  "author": "bc1qfvw60hj7ypl6uceuvmy5escysw9kvg8dlnshvz",
+  "public_key": "0251fa4ab50beeb8f3c0073405289178116f1affe38a9374c8582b84b9c9be5c83",
+  "content_hash": "4d52e2606b8034afdd7db5b3c95cf079da90ef004d61dc9ba48feaa1ac7133f8",
+  "timestamp": 1770717639,
+  "entropy_dna": "universal-release",
+  "assets": [
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "cmd/hcp-release/main.go",
+    "cmd/hcp/anchor.go",
+    "cmd/hcp/keygen.go",
+    "cmd/hcp/main.go",
+    "cmd/hcp/sign.go",
+    "cmd/hcp/verify.go",
+    "cmd/hcp/vibe.go",
+    "go.mod",
+    "go.sum",
+    "hcp",
+    "hcp-release",
+    "pkg/aha/aha.go",
+    "pkg/cognitive/complexity.go",
+    "pkg/cognitive/complexity_test.go",
+    "pkg/entropy/entropy.go",
+    "pkg/entropy/entropy_test.go",
+    "pkg/identity/identity.go",
+    "pkg/identity/identity_test.go",
+    "pkg/manifest/hashing.go",
+    "pkg/manifest/manifest.go",
+    "pkg/manifest/manifest_test.go",
+    "pkg/manifest/verify.go",
+    "pkg/zkp/mock.go",
+    "spec/HCP-Daemon.md",
+    "spec/RFC-001.md",
+    "spec/RFC-002.md",
+    "spec/RFC-003.md",
+    "spec/RFC-004.md",
+    "test.txt"
+  ],
+  "contribution_map": {
+    "LICENSE": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "Makefile": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "README.md": {
+      "commits": 3,
+      "aha_score": 30
+    },
+    "cmd/hcp-release/main.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "cmd/hcp/anchor.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/keygen.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/main.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/sign.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "cmd/hcp/verify.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "cmd/hcp/vibe.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "go.mod": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "go.sum": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "hcp": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "hcp-release": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/aha/aha.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/cognitive/complexity.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/cognitive/complexity_test.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/entropy/entropy.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/entropy/entropy_test.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/identity/identity.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/identity/identity_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/manifest/hashing.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/manifest/manifest.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/manifest/manifest_test.go": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "pkg/manifest/verify.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "pkg/zkp/mock.go": {
+      "commits": 0,
+      "aha_score": 0
+    },
+    "spec/HCP-Daemon.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-001.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-002.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-003.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "spec/RFC-004.md": {
+      "commits": 1,
+      "aha_score": 10
+    },
+    "test.txt": {
+      "commits": 0,
+      "aha_score": 0
+    }
+  },
+  "cognitive_proofs": {
+    "LICENSE": {
+      "proof_id": "76a0e989647cb59388c6484792621e457f7d9132832c0badbef666f51d414b4c",
+      "timestamp": 1770717638,
+      "public_input": "cyclomatic=17;commits=1"
+    },
+    "Makefile": {
+      "proof_id": "09e29a0d9dcc03c0f54fb7cfbc68feb094c1d835527155976b3255c9f8c80070",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=1;commits=1"
+    },
+    "README.md": {
+      "proof_id": "455436579587257300cacae5691a148b86b3b13fbc4f2fbd2490de2b105450de",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=12;commits=3"
+    },
+    "cmd/hcp-release/main.go": {
+      "proof_id": "0639f6dd79f8d1fae8572421577c3b5db5287ed228fe37b45d9088cef828ca60",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=25;commits=0"
+    },
+    "cmd/hcp/anchor.go": {
+      "proof_id": "fd03ff8877128b158b3b93677eca5698703a4137082220470143d9eb179758d2",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=8;commits=1"
+    },
+    "cmd/hcp/keygen.go": {
+      "proof_id": "0c82493d357c3e882ab11afe02e99a422cd0b5d5d09f2772cb3421bb74bc2bff",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=7;commits=1"
+    },
+    "cmd/hcp/main.go": {
+      "proof_id": "7067f9a4ad73eb3625382102993e7ca17f889ac50ceb58143154e6c1608f7902",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=2;commits=1"
+    },
+    "cmd/hcp/sign.go": {
+      "proof_id": "0acb173ee1b3141e1c07a409832f67502dd6431726abc5c52f098b39018ce523",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=8;commits=1"
+    },
+    "cmd/hcp/verify.go": {
+      "proof_id": "38935355f8af390929c90b28c81e5880e9493a3c2dff5ad8e324ffa3e10cdcef",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=13;commits=0"
+    },
+    "cmd/hcp/vibe.go": {
+      "proof_id": "7d7ed52bcbea85d25b20a18a489b01b84264ad20b7a672fdcdb8bdbced892736",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=11;commits=0"
+    },
+    "go.mod": {
+      "proof_id": "c7a4bff7820855817b407ae7499b270f18fac912f35eea9081997fe74eadce32",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=2;commits=1"
+    },
+    "go.sum": {
+      "proof_id": "c6ccb3806772d4b654ed8559a0a03b3a70ed98d6d1b971a29cb93ea9f6411aa0",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=13;commits=1"
+    },
+    "hcp": {
+      "proof_id": "395bba47b918dbb6945a48a3e7c2459ef17c0bf2dd5508b1d387aa11fdab2c7d",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=4156;commits=0"
+    },
+    "hcp-release": {
+      "proof_id": "6cfed5e3d1a704b78da15f16a8496ada59c6f3fab36f39b0edbf3cb94fb8ac55",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=2041;commits=0"
+    },
+    "pkg/aha/aha.go": {
+      "proof_id": "46c1fa92cc07dc82dca98144a74719740961f114d6ec646925967a0da3d0acb7",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=5;commits=0"
+    },
+    "pkg/cognitive/complexity.go": {
+      "proof_id": "4e1339ed4f5f954d5af2b86c6db94f260b37a1c98aa129209ca342e65ecd6575",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=14;commits=0"
+    },
+    "pkg/cognitive/complexity_test.go": {
+      "proof_id": "4e8f09101b438557c3b899a94527dc844c0575c9d35a5406a2ec344c25b5f090",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=6;commits=0"
+    },
+    "pkg/entropy/entropy.go": {
+      "proof_id": "20d8c7ee10d6d0bbfc950e43662fe411bd320b00b2c4219292118aa0a4a371cc",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=14;commits=0"
+    },
+    "pkg/entropy/entropy_test.go": {
+      "proof_id": "90c15569bdb10a5dbedb0b5e0964889afeef53f55e00583e57c83b8733965222",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=6;commits=0"
+    },
+    "pkg/identity/identity.go": {
+      "proof_id": "53179cdea7a77cc73aa13b18a85f35e467c5551de9b7676872be69ff01c88e2c",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=20;commits=1"
+    },
+    "pkg/identity/identity_test.go": {
+      "proof_id": "2715b2df5273f917a1d6bda6e610b407b910ea7b2392744d31f9b823b3aa1f08",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=8;commits=1"
+    },
+    "pkg/manifest/hashing.go": {
+      "proof_id": "7da9668bb84d3df296b9dc80f19050066ab27fbcaa9b6f1ccd910aa58fd43008",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=22;commits=0"
+    },
+    "pkg/manifest/manifest.go": {
+      "proof_id": "9c5e5da3c354b839a1f9bd9339ca065fd9d35df8c155c896256bbd7748c57a13",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=10;commits=1"
+    },
+    "pkg/manifest/manifest_test.go": {
+      "proof_id": "cf3b41881ad93704d17e52579af023593c1ba4bed8743ba8f605e0dc9a32201f",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=11;commits=1"
+    },
+    "pkg/manifest/verify.go": {
+      "proof_id": "2fb301b9547079e6f316bc4966301b4cf2e1b08235d9f98d93cc7c66d15ace1e",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=5;commits=0"
+    },
+    "pkg/zkp/mock.go": {
+      "proof_id": "ee8c0efa957fd609e461f923f5b66511d4c9902b66ef38185e2e653d6de34ea4",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=3;commits=0"
+    },
+    "spec/HCP-Daemon.md": {
+      "proof_id": "3f8e06ebbdeef6a481d42cdfe21e2d154679aebf608db5b0c480ee4f2beb0e55",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "spec/RFC-001.md": {
+      "proof_id": "30e2b816d79d8419eb7a3fa793d5b86a75be523a71a5bb3bc8ef9ecf07e50df9",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=4;commits=1"
+    },
+    "spec/RFC-002.md": {
+      "proof_id": "d8a136f0f1d6d6997ba3cdc1aa2b99ab774556f41e043c6fdfaf1d60131e7e90",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "spec/RFC-003.md": {
+      "proof_id": "938a9d119009ddec5ec62399dd26bcd14f89f6a3cbfca2210776fb09bf39dfcd",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=5;commits=1"
+    },
+    "spec/RFC-004.md": {
+      "proof_id": "8f68e007ed84979bbd87fff59d819cb6399fc9c8d480d39bbc4d7355066eab4e",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=4;commits=1"
+    },
+    "test.txt": {
+      "proof_id": "9eed5b0d2ea8980515570e8ce88e36b7454ffae4b030f43c4d3bfc492ca0526f",
+      "timestamp": 1770717639,
+      "public_input": "cyclomatic=1;commits=0"
+    }
+  },
+  "signature": "304402203f650aadf67e997e4ad31e32ec0645e8f176b0088066b81342225b8646088b5902204da2d55c6cc0b048398851422d1e9ccd4a7559d8bb87902e9161d7c05854c0b4"
+}
